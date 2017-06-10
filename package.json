@@ -1,0 +1,36 @@
+{
+  "name": "stardust-core",
+  "description": "Stardust: Create GPU-based Visualizations",
+  "author": {
+    "name": "Donghao Ren",
+    "email": "donghao.ren@gmail.com",
+    "url": "https://donghaoren.org"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stardust-vis/stardust-core.git"
+  },
+  "main": "dist/stardust.js",
+  "typings": "dist/stardust.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:ts": "tsc -p src",
+    "build:pack": "browserify dist/stardust.js -s Stardust -o dist/stardust.bundle.js",
+    "build:uglify": "uglifyjs dist/stardust.bundle.js -o dist/stardust.bundle.min.js",
+    "build": "npm-run-all build:ts build:pack build:uglify",
+    "watch": "watchify dist/stardust.js -s Stardust -o dist/stardust.bundle.js -v",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "npm-run-all": "^3.1.1",
+    "stardust-core": "0.1.0",
+    "stardust-webgl": "0.1.0",
+    "stardust-isotype": "0.1.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "license": "BSD-3-Clause"
+}
