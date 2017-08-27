@@ -20,17 +20,17 @@
     "build:ts": "tsc -p src",
     "build:pack": "browserify dist/stardust.js -s Stardust -o dist/stardust.bundle.js",
     "build:uglify": "uglifyjs dist/stardust.bundle.js -o dist/stardust.bundle.min.js",
-    "build": "npm-run-all build:ts build:pack build:uglify",
+    "build": "npm run build:ts && npm run build:pack && npm run build:uglify",
     "watch": "watchify dist/stardust.js -s Stardust -o dist/stardust.bundle.js -v",
     "prepublish": "npm run build"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
-    "npm-run-all": "^3.1.1",
     "stardust-core": "0.1.1",
-    "stardust-webgl": "0.1.1",
     "stardust-isotype": "0.1.1",
-    "uglifyjs": "^2.4.10"
+    "stardust-webgl": "0.1.1",
+    "typescript": "^2.4.2",
+    "uglify-js": "^3.0.28"
   },
   "license": "BSD-3-Clause"
 }
