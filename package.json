@@ -27,9 +27,9 @@
   "devDependencies": {
     "browserify": "^13.0.0",
     "npm-run-all": "^3.1.1",
-    "stardust-core": "0.1.0",
-    "stardust-webgl": "0.1.0",
-    "stardust-isotype": "0.1.0",
+    "stardust-core": "0.1.1",
+    "stardust-webgl": "0.1.1",
+    "stardust-isotype": "0.1.1",
     "uglifyjs": "^2.4.10"
   },
   "license": "BSD-3-Clause"
