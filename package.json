@@ -21,9 +21,9 @@
     "build:dts": "node build-dts-bundle.js",
     "build:pack": "webpack",
     "build:uglify": "uglifyjs dist/stardust.bundle.js -o dist/stardust.bundle.min.js",
-    "build": "npm run build:ts && npm run build:pack && npm run build:uglify && npm run build:dts",
+    "build": "yarn run build:ts && yarn run build:pack && yarn run build:uglify && yarn run build:dts",
     "watch": "webpack -w",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
     "stardust-core": "^0.2.0",
